@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "580738d5-0fcb-4ef0-889d-13551cf746cf",
+		"name": "EBAC-TCC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20375116",
+		"_collection_link": "https://winter-star-912831.postman.co/workspace/EBAC~17db7228-0c6d-494f-b244-341222febae8/collection/20375116-580738d5-0fcb-4ef0-889d-13551cf746cf?action=share&creator=20375116&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Listar Todos Cupons",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SenhaTCC}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{UserNameTCC}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TCC-EBAC}}wc/v3/coupons",
+					"host": [
+						"{{TCC-EBAC}}wc"
+					],
+					"path": [
+						"v3",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Cupom Específico",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SenhaTCC}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{UserNameTCC}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{TCC-EBAC}}wc/v3/coupons/10265",
+					"host": [
+						"{{TCC-EBAC}}wc"
+					],
+					"path": [
+						"v3",
+						"coupons",
+						"10265"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Cupom",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{SenhaTCC}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{UserNameTCC}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"GerentePirou\",\r\n    \"amount\": \"15\",\r\n    \"discount_type\": \"fixed_product\",\r\n    \"description\": \"TCC-EBAC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{TCC-EBAC}}wc/v3/coupons",
+					"host": [
+						"{{TCC-EBAC}}wc"
+					],
+					"path": [
+						"v3",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
