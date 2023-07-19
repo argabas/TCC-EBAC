@@ -8,3 +8,5 @@
     - Alteração do critério de aceitação us002 para adequação à massa de dados
     - Criada automação de teste em Cypress para as us001 e us002
     - Criada automação de teste em Postman para a API do us003
+## 19/07/2023 - Automação contínua
+    - Criada pipeline Jenkins
