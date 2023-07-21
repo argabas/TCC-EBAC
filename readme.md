@@ -10,3 +10,5 @@
     - Criada automação de teste em Postman para a API do us003
 ## 19/07/2023 - Automação contínua
     - Criada pipeline Jenkins
+## 20/07/2023 - Teste de performance
+    - Criado teste de performance para a página de login do us002
