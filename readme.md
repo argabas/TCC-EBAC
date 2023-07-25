@@ -12,3 +12,7 @@
     - Criada pipeline Jenkins
 ## 20/07/2023 - Teste de performance
     - Criado teste de performance para a página de login do us002
+## 25/07/2023 - Finalização da documentação
+    - Feito formatação do documento
+    - Gerado arquivo PDF para entrega
+    - Disponibilização do link para correção
